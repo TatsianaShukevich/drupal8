@@ -79,6 +79,7 @@ class ConfigForm extends ConfigFormBase {
             ->set('training.sure', $form_state->getValue('sure'))
             ->set('training.dont', $form_state->getValue('dont'))
             ->save();
+        var_dump($this->config('training.settings'));
 
         parent::submitForm($form, $form_state);
     }
