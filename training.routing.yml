@@ -1,0 +1,20 @@
+question_page_hello:
+  path: '/questionpage/hello'
+  defaults:
+    _controller: '\Drupal\training\Controller\TrainingController::showAnswer'
+  requirements:
+    _permission: 'view content'
+
+question_form:
+  path: '/questionpage'
+  defaults:
+    _form: '\Drupal\training\Form\QuestionForm'
+  requirements:
+    _permission: 'access content'
+
+settings_form:
+  path: '/training/config'
+  defaults:
+    _form: 'Drupal\training\Form\ConfigForm'
+  requirements:
+    _permission: 'administer site configuration'
