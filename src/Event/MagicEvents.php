@@ -1,15 +1,15 @@
 <?php
 /**
  * @file
- * Contains \Drupal\training\Event\MagicEvents.
+ * Contains \Drupal\magic_ball\Event\MagicEvents.
  */
 
-namespace Drupal\training\Event;
+namespace Drupal\magic_ball\Event;
 
 /**
  * Defines events for the magic question.
  *
- * @see \Drupal\training\Event\MagicPageLoadEvent
+ * @see \Drupal\magic_ball\Event\MagicPageLoadEvent
  */
 
 final class MagicEvents {
@@ -21,7 +21,7 @@ final class MagicEvents {
      *
      * @Event
      *
-     * @see \Drupal\training\Event\MagicPageLoadEvent
+     * @see \Drupal\magic_ball\Event\MagicPageLoadEvent
      *
      * @var string
      */

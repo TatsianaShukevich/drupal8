@@ -1,10 +1,10 @@
 <?php
 /**
  * @file
- * Contains \Drupal\training\Event\MagicPageLoadEvent.
+ * Contains \Drupal\magic_ball\Event\MagicPageLoadEvent.
  */
 
-namespace Drupal\training\Event;
+namespace Drupal\magic_ball\Event;
 
 use Symfony\Component\EventDispatcher\Event;
 use Drupal\Core\Config\Config;
@@ -48,6 +48,6 @@ class MagicPageLoadEvent extends Event {
      */
 
     public function getMagicHelloPhrase() {
-        return $this->config->get('training.magicHelloPhrase');
+        return $this->config->get('magic_ball.magicHelloPhrase');
     }
 }

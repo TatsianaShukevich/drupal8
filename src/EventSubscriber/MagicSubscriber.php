@@ -2,13 +2,13 @@
 
 /**
  * @file
- * Contains Drupal\training\EventSubscriber\MagicSubscriber.
+ * Contains Drupal\magic_ball\EventSubscriber\MagicSubscriber.
  */
 
-namespace Drupal\training\EventSubscriber;
+namespace Drupal\magic_ball\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Drupal\training\Event\MagicEvents;
+use Drupal\magic_ball\Event\MagicEvents;
 
 class MagicSubscriber implements EventSubscriberInterface {
 

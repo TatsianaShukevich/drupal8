@@ -1,11 +1,11 @@
 <?php
 /**
  * @file
- * Contains \Drupal\training\Form\MagicQuestionForm.
+ * Contains \Drupal\magic_ball\Form\MagicQuestionForm.
  */
 
 
-namespace Drupal\training\Form;
+namespace Drupal\magic_ball\Form;
 
 
 use Drupal\Core\Form\FormBase;
@@ -22,7 +22,7 @@ class MagicQuestionForm extends FormBase {
      */
     public static function create(ContainerInterface $container) {
         return new static(
-            $container->get('training.answer_service')
+            $container->get('magic_ball.answer_service')
         );
     }
 

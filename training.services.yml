@@ -1,8 +1,0 @@
-services:
-    training.answer_service:
-        class: Drupal\training\AnswerService
-
-    training.magic_subscriber:
-        class: Drupal\training\EventSubscriber\MagicSubscriber
-        tags:
-          - { name: event_subscriber }

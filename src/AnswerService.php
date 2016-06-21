@@ -1,14 +1,12 @@
 <?php
 /**
  * @file
- * Contains \Drupal\training\AnswerService.
+ * Contains \Drupal\magic_ball\AnswerService.
  */
 
-namespace Drupal\training;
+namespace Drupal\magic_ball;
 
 use Drupal\Core\Config;
-//use Drupal\Core\Config\Context\ContextInterface;
-
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class AnswerService {
@@ -16,14 +14,14 @@ class AnswerService {
     protected $config;
     
     public function __construct() {
-        $this->config = \Drupal::config('training.settings');
+        $this->config = \Drupal::config('magic_ball.settings');
         //$this->config = $config;
     }
 
 
     
     public  function  getAnswer() {
-        drupal_set_message($this->config->get('training.yes'));
+        drupal_set_message($this->config->get('magic_ball.yes'));
     }
     
 }
