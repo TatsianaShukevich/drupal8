@@ -9,6 +9,9 @@ namespace Drupal\magic_ball\Form;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
+/**
+ * Form for configuration magic-ball module.
+ */
 class MagicConfigForm extends ConfigFormBase {
 
     /**
@@ -35,14 +38,30 @@ class MagicConfigForm extends ConfigFormBase {
         $form['key_phrase'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('Key'),
+            '#required' => TRUE,
         );
         $form['new_phrase'] = array(
             '#type' => 'textfield',
             '#title' => $this->t('New phrase'),
+            '#required' => TRUE,
         );
 
         return parent::buildForm($form, $form_state);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+//    public function validateForm(array &$form, FormStateInterface $form_state) {
+//        $key = $form_state->getValue('key_phrase');
+//
+//        if ($this->config('magic_ball.settings')->get("magic_ball.$key")) {
+//            
+//            $form_state->setErrorByName('key_phrase', $this->t('This key already exists'));
+//        }
+//
+//        parent::validateForm($form, $form_state);
+//    }
 
     /**
      * {@inheritdoc}
