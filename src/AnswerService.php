@@ -52,8 +52,11 @@ class AnswerService {
         $phrases = $this->config->get();
 
         $randomPhrase = array_rand($phrases['magic_ball'], 1);
-        $randomPhrase = ($randomPhrase == 'magicHelloPhrase')? array_rand($phrases['magic_ball'], 1): $randomPhrase;
-        
-        drupal_set_message($this->config->get("magic_ball.$randomPhrase"));
+        if ($randomPhrase == 'magicHelloPhrase') {
+            drupal_set_message("Try again please");
+        }
+        else {
+            drupal_set_message($this->config->get("magic_ball.$randomPhrase"));
+        }
     }    
 }
